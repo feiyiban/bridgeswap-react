@@ -1,0 +1,29 @@
+.right-nav{
+    margin: 4px 0;
+}
+.header-nav-btn{
+    padding: 4px 8px;
+    line-height: 44px;
+    background: rgba(228, 180, 98, 0.16);
+    color: #d4a24e;
+    font-weight: bold;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align:left;
+    font-size: 1.3em;
+    margin:0 20px 0 10px;
+    border-radius: 10px;
+}
+
+@media (max-width:772px) {
+    .header-nav-btn{
+        font-size: 0.1em;
+        width: 300px;
+    }
+    .header-nav-btn > span{
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

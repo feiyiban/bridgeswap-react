@@ -1,0 +1,79 @@
+.btn {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  padding: 12px 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  background: #fff;
+  opacity: 0;
+}
+.btn:active::before {
+  opacity: 0.2;
+}
+.btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: var(--x, 0);
+  top: var(--y, 0);
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: translate(-50%, -50%) scale(10);
+  opacity: 0;
+  transition: transform 0.8s, opacity 0.8s;
+}
+.btn:active::after {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0.3;
+  transition: 0s;
+}
+.btn-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-primary{
+  transition: .3s;
+  background: rgb(24,144,255);
+}
+.btn-primary:hover{
+  transition: .3s;
+  background: rgb(64,169,255);
+}
+.btn-warning{
+  transition: .3s;
+  background: rgb(228,180,98);
+}
+.btn-warning:hover{
+  transition: .3s;
+  background: rgb(247,203,126);
+}
+.btn-danger{
+  transition: .3s;
+  background: rgb(255,77,79);
+}
+.btn-danger:hover{
+  transition: .3s;
+  background: rgb(255,120,117);
+}

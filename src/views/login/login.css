@@ -1,0 +1,148 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+.login-logo{
+    display: flex;
+    align-content: center;
+    margin-bottom: 40px;
+}
+.logo-welcome{
+    transition: .3s;
+    color: rgb(0,0,0);
+    font-weight: 500;
+    font-size: 2em;
+    margin-left: 30px;
+}
+.login-from{
+    position: relative;
+}
+.from-input{
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.input-icon{
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+.from-verify{
+    display: flex;
+    align-items: center;
+}
+.verify{
+    width: 200px;
+    margin-left: 10px;
+}
+.login-input{
+    border:1px solid rgb(204,204,204);
+    padding: 10px 40px 10px 15px;
+    border-radius: 5px;
+}
+.login-input{
+    width: 100%;
+    border:1px solid rgb(204,204,204);
+    padding: 10px 40px 10px 15px;
+    border-radius: 4px;
+}
+.login-input:focus {
+    border-color: #fff!important;
+    transition: .3s;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(27 99 242);
+}
+
+@media (max-width:772px) {
+    .logo-welcome{
+        transition: .3s;
+        color: rgb(0,0,0);
+        font-weight: 500;
+        font-size: 1.5em;
+        margin-left: 30px;
+    }
+}
+
+/* .btn:hover {
+    border-radius: 5px;
+    color: #fff;
+    background: #03e9f4;
+    box-shadow: 0 0 5px 0 #03e9f4,
+        0 0 25px 0 #03e9f4,
+        0 0 50px 0 #03e9f4,
+        0 0 100px 0 #03e9f4;
+    transition: all 1s linear;
+} */
+
+/* .btn>span {
+    position: absolute;
+}
+
+.btn>span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    background: -webkit-linear-gradient(left, transparent, #03e9f4);
+    left: -100%;
+    top: 0px;
+    animation: line1 1s linear infinite;
+}
+
+@keyframes line1 {
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.btn>span:nth-child(2) {
+    width: 2px;
+    height: 100%;
+    background: -webkit-linear-gradient(top, transparent, #03e9f4);
+    right: 0px;
+    top: -100%;
+    animation: line2 1s 0.25s linear infinite;
+}
+
+@keyframes line2 {
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.btn>span:nth-child(3) {
+    width: 100%;
+    height: 2px;
+    background: -webkit-linear-gradient(left, #03e9f4, transparent);
+    left: 100%;
+    bottom: 0px;
+    animation: line3 1s 0.75s linear infinite;
+}
+
+@keyframes line3 {
+
+    50%,
+    100% {
+        left: -100%;
+    }
+}
+
+.btn>span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    background: -webkit-linear-gradient(top, transparent, #03e9f4);
+    left: 0px;
+    top: 100%;
+    animation: line4 1s 1s linear infinite;
+}
+
+@keyframes line4 {
+
+    50%,
+    100% {
+        top: -100%;
+    }
+} */

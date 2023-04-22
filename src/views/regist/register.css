@@ -1,0 +1,21 @@
+.from-lable{
+    display: flex;
+    
+}
+.input-lable{
+    margin: 0 5px;
+    width: 30%;
+    cursor: pointer;
+    transition: .3s;
+}
+.from-bottom{
+    margin-top: 5px;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.from-bottom:hover{
+    text-decoration:underline;
+}

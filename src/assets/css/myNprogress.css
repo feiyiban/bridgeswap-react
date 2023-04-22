@@ -1,0 +1,142 @@
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+  }
+  
+  #nprogress .bar {
+    background: rgb(27,99,242);
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 1px;
+  }
+  
+  /* Fancy blur effect */
+  #nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #ac1010, 0 0 5px #ac1010;
+    opacity: 1.0;
+  
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+        -ms-transform: rotate(3deg) translate(0px, -4px);
+            transform: rotate(3deg) translate(0px, -4px);
+  }
+  
+  /* Remove these to get rid of the spinner */
+  #nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .nprogress-custom-parent #nprogress .spinner,
+  .nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+  }
+  
+  :root {
+    --size: 25;
+    --color-one: #ea4335;
+    --color-two: #4285f4;
+    --color-three: #34a853;
+    --color-four: #fbbc05;
+    --spin-speed: 3.25;
+    --speed: 2.5;
+    --width: 5;
+  }
+  
+  @property --nose {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+  }
+  
+  @property --tail {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+  }
+  
+  #nprogress .spinner-icon  {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    -webkit-mask: conic-gradient(from 45deg,
+            transparent 0 var(--tail),
+            #000 0 var(--nose),
+            transparent 0 var(--nose));
+    mask: conic-gradient(from 45deg,
+            transparent 0 var(--tail),
+            #000 0 var(--nose),
+            transparent 0 var(--nose));
+    border-style: solid;
+    border-width: 4px;
+    border-top-color: var(--color-one);
+    border-right-color: var(--color-two);
+    border-bottom-color: var(--color-three);
+    border-left-color: var(--color-four);
+    -webkit-animation: load calc(var(--speed) * 1s) both infinite ease-in-out, spin calc(var(--spin-speed) * 1s) infinite linear;
+    animation: load calc(var(--speed) * 1s) both infinite ease-in-out, spin calc(var(--spin-speed) * 1s) infinite linear;
+  }
+  
+  @-webkit-keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes load {
+    0% {
+        --tail: 0%;
+        --nose: 0%;
+    }
+  
+    40%,
+    60% {
+        --nose: 100%;
+        --tail: 0%;
+    }
+  
+    100% {
+        --nose: 100%;
+        --tail: 100%;
+    }
+  }
+  
+  @keyframes load {
+    0% {
+        --tail: 0%;
+        --nose: 0%;
+    }
+  
+    40%,
+    60% {
+        --nose: 100%;
+        --tail: 0%;
+    }
+  
+    100% {
+        --nose: 100%;
+        --tail: 100%;
+    }
+  }
